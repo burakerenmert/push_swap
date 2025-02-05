@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
+/*   Updated: 2025/02/05 04:37:42 by burakerenme      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
-#include "stdlib.h"
-#include "stdio.h"
 
 void push(stack1 **head, int num)
 {
@@ -16,14 +26,23 @@ void push(stack1 **head, int num)
 int push_swap(char *str, stack1 **head)
 {
     int num;
+    char **str_split;
+    int i;
 
-    num = ft_atoi(str);
-    if (num == 0)
+    i = 0;
+    str_split = ft_split(str, ' ');
+    while (str_split[i])
     {
-        printf("Error\n");
-        return (0);
+        num = ft_atoi(str_split[i]);
+        check_duplicate(num);
+        if (num == 0)
+        {
+            printf("Error\n");
+            return (0);
+        }
+        push(head, num);
+        i++;
     }
-    push(head, num);
     return (1);
 }
 void print_stack(stack1 *head)
@@ -37,6 +56,8 @@ void print_stack(stack1 *head)
 }
 int main(int ac, char **av)
 {
+    if(ac == 1)
+        exit(1);
     int i;
     int f;
     stack1 *head = NULL;

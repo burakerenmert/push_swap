@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:16:56 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/03 22:37:14 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/05 04:07:09 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ int	ft_atoi(const char *str)
 		}
 		i++;
 	}
+	if (!(str[i] <= 57 && str[i] >= 48) && (str[i] != ' ') && (str[i] != '\0'))
+		return(0);
 	return (sum * sign);
 }

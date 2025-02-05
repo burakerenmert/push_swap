@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = Libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRC = push_swap.c
+SRC = push_swap.c check.c
 OBJ = $(SRC:.c=.o)
 
 NAME = push_swap
@@ -15,8 +15,7 @@ $(LIBFT):
 	make -C $(LIBFT_DIR)   # Compiles Libft first
 
 $(NAME): $(OBJ)
-	gcc push_swap.c ./Libft/libft.a -o $(NAME)
-	# $(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)  # Link libft.a
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)  # Link libft.a
 
 clean:
 	rm -f $(OBJ)
