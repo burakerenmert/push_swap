@@ -6,28 +6,48 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:20:28 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/05 05:03:02 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/02/06 23:22:50 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	*alloc_arr(int *arr, int num, int c)
+{
+	int *arr2;
+	int i;
+
+	i = 0;
+	arr2 = malloc(sizeof(int) * (c + 1));
+	if (!arr2)
+		return(NULL);
+	while(i < c)
+	{
+		arr2[i] = arr[i];
+		i++;
+	}
+	arr2[c] = num;
+	free(arr);
+	return(arr2);
+}
 void    check_duplicate(int num)
 {
     static int *arr;
-    static int c;
-    int i;
-    int j;
+    static int	c;
+    int			i;
+    int			j;
 
     i = 0;
     if (!arr)
-        arr = malloc(sizeof(int) * c);
+        arr = malloc(sizeof(int) * 1);
+	else
+		arr = alloc_arr(arr, num, c);
     arr[c] = num;
     c++;
     while (i < c)
     {
         j = (i + 1);
-        while (arr[i] != arr[j] && j < c)
+        while (j < c && arr[i] != arr[j])
         {
             j++;
         }

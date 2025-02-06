@@ -6,7 +6,7 @@
 /*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/05 04:37:42 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/02/06 23:59:04 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int push_swap(char *str, stack1 **head)
         if (num == 0)
         {
             printf("Error\n");
-            return (0);
+            exit (1);
         }
         push(head, num);
         i++;
@@ -56,7 +56,7 @@ void print_stack(stack1 *head)
 }
 int main(int ac, char **av)
 {
-    if(ac == 1)
+    if((ac == 1) || (ac > 1 && av[1][0] == '\0'))
         exit(1);
     int i;
     int f;
