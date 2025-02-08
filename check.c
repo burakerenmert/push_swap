@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
+/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:20:28 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/06 23:22:50 by burakerenme      ###   ########.fr       */
+/*   Updated: 2025/02/08 19:53:32 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	*alloc_arr(int *arr, int num, int c)
+int     *alloc_arr(int *arr, int num, int c)
 {
 	int *arr2;
 	int i;
