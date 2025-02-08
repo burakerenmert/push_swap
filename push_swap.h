@@ -13,11 +13,11 @@ typedef struct stacka
 typedef struct stackb
 {
     int data;
-    struct stacka *next;
+    struct stackb *next;
 }stack2;
 void    check_duplicate(int num);
 int     *alloc_arr(int *arr, int num, int c);
-void    functions(stack1 **head);
+void    swap_functions(stack1 **head);
 void    sa(stack1 **head);
 
 #endif
