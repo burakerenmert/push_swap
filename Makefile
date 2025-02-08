@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = Libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRC = push_swap.c check.c swap_functions.c
+SRC = push_swap.c check.c swap_functions.c push_functions.c
 OBJ = $(SRC:.c=.o)
 
 NAME = push_swap
