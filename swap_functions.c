@@ -6,20 +6,21 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 19:29:34 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/09 00:54:05 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/09 19:15:04 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    swap_functions(stack1 **head)
+void    swap_functions(stack **head_a, stack **head_b)
 {
-    sa(head);
+    sa(head_a);
+    sb(head_b);
 }
-void    sa(stack1 **head)
+void    sa(stack **head)
 {
-    stack1 *first;
-    stack1 *second;
+    stack *first;
+    stack *second;
     
     if(!head || !*head || !(*head)->next)
         return;
@@ -29,10 +30,10 @@ void    sa(stack1 **head)
     second->next = first;
     *head = second;
 }
-void    sb(stack2 **head)
+void    sb(stack **head)
 {
-    stack2 *first;
-    stack2 *second;
+    stack *first;
+    stack *second;
 
     if(!head || !*head || !(*head)->next)
         return;
@@ -42,7 +43,7 @@ void    sb(stack2 **head)
     second->next = first;
     *head = second;
 }
-void    ss(stack1 **head_a, stack2 **head_b)
+void    ss(stack **head_a, stack **head_b)
 {
     sa(head_a);
     sb(head_b);

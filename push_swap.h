@@ -5,19 +5,24 @@
 #include "stdlib.h"
 #include "stdio.h"
 
-typedef struct stacka
+typedef struct s_stack
 {
     int data;
-    struct stacka *next;
-}stack1;
-typedef struct stackb
-{
-    int data;
-    struct stackb *next;
-}stack2;
+    struct s_stack *next;
+}stack;
+
 void    check_duplicate(int num);
 int     *alloc_arr(int *arr, int num, int c);
-void    swap_functions(stack1 **head);
-void    sa(stack1 **head);
+void    swap_functions(stack **head_a, stack **head_b);
+void    sa(stack **head);
+void    sb(stack **head);
+void    ss(stack **head_a, stack **head_b);
+void    push_functions(stack **head_a, stack **head_b);
+void    pa(stack **head_a, stack **head_b);
+void    pb(stack **head_a, stack **head_b);
+void	rotate_functions(stack **head_a, stack **head_b);
+void    ra(stack **head_a);
+void    rb(stack **head_b);
+void	rr(stack **head_a, stack **head_b);
 
 #endif
