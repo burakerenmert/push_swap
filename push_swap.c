@@ -6,14 +6,24 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/09 21:27:46 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/22 19:39:37 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+void	print_index(stack *head)
+{
+	printf("index : ");
+	while (head != NULL)
+	{
+		printf("%d -> ", head->index);
+		head = head->next;
+	}
+	printf("NULL\n");
+}
 void	print_stack_a(stack *head)
 {
+	printf("stack a : ");
 	while (head != NULL)
     {
         printf("%d -> ", head->data);
@@ -23,6 +33,7 @@ void	print_stack_a(stack *head)
 }
 void	print_stack_b(stack *head)
 {
+	printf("stack b : ");
 	while (head != NULL)
     {
         printf("%d -> ", head->data);
@@ -82,13 +93,8 @@ int main(int ac, char **av)
 	}
 	print_stack_a(head_a);
 	print_stack_b(head_b);
-	push_functions(&head_a, &head_b);
-	push_functions(&head_a, &head_b);
-	push_functions(&head_a, &head_b);
+	get_array(&head_a);
 	print_stack_a(head_a);
-	print_stack_b(head_b);
-	rotate_functions(&head_a, &head_b);
-	print_stack_a(head_a);
-	print_stack_b(head_b);
+	print_index(head_a);
 	return (0);
 }

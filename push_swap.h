@@ -8,6 +8,7 @@
 typedef struct s_stack
 {
     int data;
+    int index;
     struct s_stack *next;
 }stack;
 
@@ -24,5 +25,12 @@ void	rotate_functions(stack **head_a, stack **head_b);
 void    ra(stack **head_a);
 void    rb(stack **head_b);
 void	rr(stack **head_a, stack **head_b);
+void	reverse_rotate_functions(stack **head_a, stack **head_b);
+void    rra(stack **head);
+void    rrb(stack **head);
+void	rrr(stack **head_a, stack **head_b);
+void	get_array(stack **head);
+void	bubble_sort(int *arr, int size);
+void	get_index(stack *head, int *arr, int size);
 
 #endif
