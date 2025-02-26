@@ -32,5 +32,7 @@ void	rrr(stack **head_a, stack **head_b);
 void	get_array(stack **head);
 void	bubble_sort(int *arr, int size);
 void	get_index(stack *head, int *arr, int size);
-
+int find_max_index(stack *a);
+int calculate_max_bits(int max);
+void radix_sort(stack **a, stack **b);
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: burakerenmert <burakerenmert@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/22 19:39:37 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/26 04:40:05 by burakerenme      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,8 @@ int main(int ac, char **av)
 			return(0);
 	}
 	print_stack_a(head_a);
-	print_stack_b(head_b);
-	get_array(&head_a);
+	radix_sort(&head_a, &head_b);
 	print_stack_a(head_a);
-	print_index(head_a);
+	print_stack_b(head_b);
 	return (0);
 }
