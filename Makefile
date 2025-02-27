@@ -20,17 +20,17 @@ $(PRINTF):
 	make -C $(PRINTF_DIR)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(PRINTF) -o $(NAME)  # Link both libft.a and libftprintf.a
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(PRINTF) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
-	make clean -C $(LIBFT_DIR)   # Clean Libft objects
-	make clean -C $(PRINTF_DIR)  # Clean ft_printf objects
+	make clean -C $(LIBFT_DIR)
+	make clean -C $(PRINTF_DIR)
 
 fclean: clean
 	rm -f $(NAME)
-	make fclean -C $(LIBFT_DIR)  # Remove Libft library
-	make fclean -C $(PRINTF_DIR) # Remove ft_printf library
+	make fclean -C $(LIBFT_DIR)
+	make fclean -C $(PRINTF_DIR)
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:20:28 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/27 20:52:27 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/27 21:31:33 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void    check_duplicate(int num)
             j++;
         if (arr[i] == arr[j])
         {
-            printf("Error\n");
+            ft_printf("Error\n");
             free (arr);
             exit(1);
         }

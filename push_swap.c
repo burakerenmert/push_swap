@@ -6,40 +6,40 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/27 21:04:18 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/27 21:31:17 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 void	print_index(stack *head)
 {
-	printf("index : ");
+	ft_printf("index : ");
 	while (head != NULL)
 	{
-		printf("%d -> ", head->index);
+		ft_printf("%d -> ", head->index);
 		head = head->next;
 	}
-	printf("NULL\n");
+	ft_printf("NULL\n");
 }
 void	print_stack_a(stack *head)
 {
-	printf("stack a : ");
+	ft_printf("stack a : ");
 	while (head != NULL)
     {
-        printf("%d -> ", head->data);
+        ft_printf("%d -> ", head->data);
         head = head->next;
     }
-	printf("NULL\n");
+	ft_printf("NULL\n");
 }
 void	print_stack_b(stack *head)
 {
-	printf("stack b : ");
+	ft_printf("stack b : ");
 	while (head != NULL)
     {
-        printf("%d -> ", head->data);
+        ft_printf("%d -> ", head->data);
         head = head->next;
     }
-	printf("NULL\n");
+	ft_printf("NULL\n");
 }
 void	push_a(stack **head, int num)
 {
@@ -66,7 +66,7 @@ int	stack_fill(char *str, stack **head)
 		check_duplicate(num);
 		if (num == 0)
 		{
-			printf("Error\n");
+			ft_printf("Error\n");
 			exit (1);
 		}
 		push_a(head, num);
