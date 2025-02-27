@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 21:31:00 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/27 22:46:30 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/28 00:53:59 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void    rra(stack **head)
     prev->next = NULL;
     last->next = *head;
     *head = last;
+    ft_printf("rra\n");
 }
 void    rrb(stack **head)
 {
@@ -55,9 +56,11 @@ void    rrb(stack **head)
     prev->next = NULL;
     last->next = *head;
     *head = last;
+    ft_printf("rrb\n");
 }
 void	rrr(stack **head_a, stack **head_b)
 {
 	rra(head_a);
 	rrb(head_b);
+    ft_printf("rrr\n");
 }

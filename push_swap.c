@@ -6,12 +6,35 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/27 22:55:24 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/28 00:56:20 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void free_split(char **str_split)
+{
+    int i;
+    
+	i = 0;
+    while (str_split[i])
+    {
+        free(str_split[i]);
+        i++;
+    }
+    free(str_split);
+}
+void free_stack(stack *head)
+{
+    stack *tmp;
+
+    while (head != NULL)
+    {
+        tmp = head;
+        head = head->next;
+        free(tmp);
+    }
+}
 void	print_index(stack *head)
 {
 	ft_printf("index : ");
@@ -73,7 +96,7 @@ int	stack_fill(char *str, stack **head)
 		push_a(head, num);
 		i++;
 	}
-	free(str_split);
+	free_split(str_split);
 	return (1);
 }
 int main(int ac, char **av)
@@ -93,11 +116,13 @@ int main(int ac, char **av)
 		if(f == 0)
 			return(0);
 	}
-	print_stack_a(head_a);
+	// print_stack_a(head_a);
 	get_array(&head_a);
-	print_index(head_a);
+	// print_index(head_a);
 	radix_sort(&head_a, &head_b);
-	print_stack_a(head_a);
-	print_stack_b(head_b);
+	// print_stack_a(head_a);
+	// print_stack_b(head_b);
+	free_stack(head_a);
+	free_stack(head_b);
 	return (0);
 }

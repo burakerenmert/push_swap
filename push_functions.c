@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 00:55:58 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/09 19:18:54 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/28 00:54:28 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void    pa(stack **head_a, stack **head_b)
         return;
     first_b -> next = *head_a;
     *head_a = first_b;
+    ft_printf("pa\n");
 }
 void    pb(stack **head_a, stack **head_b)
 {
@@ -37,4 +38,5 @@ void    pb(stack **head_a, stack **head_b)
         return;
     first_a -> next = *head_b;
     *head_b = first_a;
+    ft_printf("pb\n");
 }
