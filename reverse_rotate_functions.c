@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 21:31:00 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/22 17:20:03 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/27 22:46:30 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void    rra(stack **head)
     
     last = *head;
     prev = NULL;
-    
     while (last->next)
     {
         prev = last;
@@ -47,7 +46,6 @@ void    rrb(stack **head)
     
     last = *head;
     prev = NULL;
-    
     while (last->next)
     {
         prev = last;

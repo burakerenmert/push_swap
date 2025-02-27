@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 17:33:02 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/27 19:57:44 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/27 22:53:46 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	get_array(stack **head)
 	}
 	bubble_sort(arr, size);
 	get_index(*head, arr, size);
+    free(arr);
 }
 void	bubble_sort(int *arr, int size)
 {

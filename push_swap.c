@@ -6,11 +6,12 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/27 21:31:17 by buramert         ###   ########.fr       */
+/*   Updated: 2025/02/27 22:55:24 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 void	print_index(stack *head)
 {
 	ft_printf("index : ");
@@ -72,6 +73,7 @@ int	stack_fill(char *str, stack **head)
 		push_a(head, num);
 		i++;
 	}
+	free(str_split);
 	return (1);
 }
 int main(int ac, char **av)

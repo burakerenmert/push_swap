@@ -4,7 +4,6 @@
 #include "Libft/libft.h"
 #include "ft_printf/ft_printf.h"
 #include "stdlib.h"
-#include "stdio.h"
 
 typedef struct s_stack
 {
