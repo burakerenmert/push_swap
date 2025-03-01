@@ -4,6 +4,7 @@
 #include "Libft/libft.h"
 #include "ft_printf/ft_printf.h"
 #include "stdlib.h"
+#include "stdio.h"
 
 typedef struct s_stack
 {
@@ -35,4 +36,5 @@ void	get_index(stack *head, int *arr, int size);
 int find_max_index(stack *a);
 int calculate_max_bits(int max);
 void radix_sort(stack **a, stack **b);
+int ft_checksorted(stack *stack);
 #endif

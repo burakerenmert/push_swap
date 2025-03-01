@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:20:28 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/28 00:51:23 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/02 00:12:48 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,19 @@ void    check_duplicate(int num)
         }
         i++;
     }
+}
+
+int	ft_checksorted(stack *stack)
+{
+	int	i;
+
+	i = stack->data;
+	while (stack)
+	{
+		if (i < stack->data)
+			return (0);
+		i = stack->data;
+		stack = stack->next;
+	}
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 04:22:47 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/28 00:56:20 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/02 01:33:01 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,15 +76,27 @@ void	push_a(stack **head, int num)
 	new_node->next = *head;
 	*head = new_node;
 }
+
+int ft_strdoublelen(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
 int	stack_fill(char *str, stack **head)
 {
 	int num;
 	char **str_split;
 	int i;
 
-	i = 0;
 	str_split = ft_split(str, ' ');
-	while (str_split[i])
+	i = ft_strdoublelen(str_split);
+	i--;
+	while (i != -1 && str_split[i])
 	{
 		num = ft_atoi(str_split[i]);
 		check_duplicate(num);
@@ -94,7 +106,7 @@ int	stack_fill(char *str, stack **head)
 			exit (1);
 		}
 		push_a(head, num);
-		i++;
+		i--;
 	}
 	free_split(str_split);
 	return (1);
@@ -119,8 +131,9 @@ int main(int ac, char **av)
 	// print_stack_a(head_a);
 	get_array(&head_a);
 	// print_index(head_a);
-	radix_sort(&head_a, &head_b);
-	// print_stack_a(head_a);
+	if (!ft_checksorted(head_a))
+		radix_sort(&head_a, &head_b);
+	//print_stack_a(head_a);
 	// print_stack_b(head_b);
 	free_stack(head_a);
 	free_stack(head_b);

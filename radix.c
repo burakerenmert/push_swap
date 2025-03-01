@@ -6,7 +6,7 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 03:26:23 by burakerenme       #+#    #+#             */
-/*   Updated: 2025/02/27 21:40:49 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/02 01:39:11 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void radix_sort(stack **a, stack **b)
 	while (i < max_bits)
 	{
         j = 0;
-
 		while (j < size)
 		{
             if ((*a) && (((*a)->index >> i) & 1))
@@ -61,9 +60,7 @@ void radix_sort(stack **a, stack **b)
 			j++;
         }
         while (*b)
-		{
             pa(a, b);
-        }
         i++;
     }
 }
