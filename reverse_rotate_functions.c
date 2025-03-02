@@ -6,16 +6,12 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 21:31:00 by buramert          #+#    #+#             */
-/*   Updated: 2025/03/02 01:40:06 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/02 03:03:07 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate_functions(stack **head_a, stack **head_b)
-{
-	rrr(head_a, head_b);
-}
 void    rra(stack **head)
 {
     stack *prev;

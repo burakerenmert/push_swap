@@ -6,17 +6,12 @@
 /*   By: buramert <buramert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 19:29:34 by buramert          #+#    #+#             */
-/*   Updated: 2025/02/28 00:53:05 by buramert         ###   ########.fr       */
+/*   Updated: 2025/03/02 03:03:22 by buramert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    swap_functions(stack **head_a, stack **head_b)
-{
-    sa(head_a);
-    sb(head_b);
-}
 void    sa(stack **head)
 {
     stack *first;
